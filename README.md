@@ -1,5 +1,5 @@
 # 🌤️ IoT Weather Station (ESP32 Firmware)
-This repository contains the firmware and hardware configuration for an advanced IoT Weather Station. 
+This repository contains the firmware and hardware configuration for an advanced IoT Weather Station.  
 Built on the ESP32 platform, the system monitors 10 different environmental parameters and synchronizes data in real-time with a Firebase Realtime Database.  
 
 ## 🛠️ Hardware Architecture  
@@ -7,7 +7,17 @@ The project utilizes the ESP-WROOM-32 due to its integrated Wi-Fi, dual-core pro
 
 ## 🛰️ Sensor Suite  
 The system integrates 9 physical sensors providing 10 functional readings:  
-
+| Sensor Model       | Parameter Measured                 | Connection Type     | Operating Voltage  |  
+|--------------------|------------------------------------|---------------------|--------------------|  
+| DHT11              | Temperature & Humidity             | Digital             | 3.3V / 5V          |  
+| GUVA-S12SD         | Ultraviolet (UV) Index             | Analog              | 2.5V - 5V          |  
+| MQ-4               | Hazardous Gas (Methane/Propane)    | Analog              | 5V (Max)           |  
+| BMP180             | Atmospheric Pressure & Altitude    | I2C                 | 1.8V - 3.6V        |  
+| TSL2561            | Light Intensity (Lux)              | I2C                 | 3.3V (Rec.)        |  
+| GP2Y1014AU0F       | Dust Particles (PM2.5)             | Analog              | 5V                 |  
+| QMC5883L           | Wind Direction (Digital Compass)   | I2C                 | 3V - 5V            |  
+| A44E Hall Effect   | Wind Speed (Anemometer)            | Interrupt-based     | 3.3V / 5V          |  
+| Rain Sensor        | Precipitation Intensity            | Analog              | 3.3V / 5V          |  
 
 ## 💻 Tech Stack & Libraries
 Development Environment:  
