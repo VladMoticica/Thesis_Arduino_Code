@@ -32,14 +32,13 @@ Core Libraries:
 - Wire.h: Facilitates I2C communication (Address 0x39 for Lux, 0x0D for Compass).  
 
 ## 🚀 Key Implementation Details
-1. Data Processing Pipeline  
-The firmware follows a cyclic executive pattern:  
+1. Data Processing Pipeline
 - Update Interval: Data is sampled and pushed to Firebase every 2.5 seconds to balance power and real-time accuracy.  
 - Wind Speed: Uses a hardware interrupt on the A44E sensor to calculate RPM, which is then converted from circular to linear velocity (m/s).  
 - Calibration: Includes software-level mapping for the MQ-4 gas sensor and an inverse reading logic for the rain sensor (resistance decreases as moisture increases).  
-2. Firebase Connectivity   
-The system connects via a secured API Key and Database URL.   
-Data is structured in a JSON tree under the Sensor/ parent node.  
+2. Firebase Connectivity    
+- The system connects via a secured API Key and Database URL.  
+- Data is structured in a JSON tree under the Sensor/ parent node.  
   
 ## 📦 Mechanical Design  
 The system is housed in a custom-designed 3D-printed enclosure (PLA).  
